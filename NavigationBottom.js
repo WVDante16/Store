@@ -1,21 +1,24 @@
 import React from 'react';
-import {StyleSheet, Button, View, Text} from 'react-native';
+import {StyleSheet, Button, View} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
-function NavigationBottom({navigation}) {
+function NavigationBottom({}) {
+    const navigation = useNavigation();
+    
     return (
-        <View style={styles.containerNavBottom}>
-        <Button 
-            color="#455a64"
-            title="Atras"
-            onPress={() => navigation.goBack()}
-        />
+        <View style={styles.root}>
+            <Button 
+                color="#4f83cc"
+                title="Atras"
+                onPress={() => navigation.goBack()}
+            />
 
-        <Button 
-            color="#455a64"
-            title="Home"
-            onPress={() => navigation.popToTop()}
-        />
-    </View>
+            <Button 
+                color="#4f83cc"
+                title="Home"
+                onPress={() => navigation.popToTop()}
+            />
+        </View>
     );
 }
 
@@ -24,7 +27,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-around',
         alignItems: 'center',
-        backgroundColor: '#ffffc2',
+        backgroundColor: '#002f6c',
 
         padding: 5,
         width: '100%',
