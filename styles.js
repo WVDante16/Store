@@ -7,4 +7,8 @@ export default StyleSheet.create({
         justifyContent: 'center',
         backgroundColor: '#03a9f4'
     },
+
+    text: {
+        marginBottom: 10,
+    }
 })
