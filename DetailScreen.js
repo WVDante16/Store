@@ -1,9 +1,20 @@
 import React from 'react';
-import {StyleSheet, Button, View, Text} from 'react-native';
+import {StyleSheet, Button, View, Text, Image} from 'react-native';
 import NavigationBottom from './NavigationBottom';
 
 function DetailScreen({route, navigation}) {
     const {id, title, description, image, stock} = route.params;
+
+    navigation.setOptions({
+        title: title,
+        headerRight: () => (
+            <button
+                title="Buy"
+                onProgress={() => {}}
+                disabled={stock === 0}
+            />
+        )
+    })
 
     return (
         <View style = {{flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#66ffa6'}}>
