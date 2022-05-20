@@ -10,8 +10,8 @@ function HomeScreen({props}) {
                 style = {{width: 400, height: 250, marginBottom: 15}}
                 source = {require("./assets/quieroestarsolo.png")}
             />
-            <Text style={styles.text}>Home</Text>
-            
+            <Text style={styles.text}>Pasele a la tiendita</Text>
+            <Button onPress={() => navigation.navigate("Store")}/>
         </View>
     );
 }
