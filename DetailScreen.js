@@ -6,9 +6,9 @@ function DetailScreen({route, navigation}) {
     const {id, name, description, image, stock} = route.params;
 
     navigation.setOptions({
-        title: title,
+        title: name,
         headerRight: () => (
-            <button
+            <Button
                 title="Buy"
                 onProgress={() => {}}
                 disabled={stock === 0}

@@ -1,16 +1,17 @@
 import React from 'react';
-import {Button, View, Text} from 'react-native';
+import {View, Text, Image} from 'react-native';
 import styles from './styles';
+import image from './assets/quieroestarsolo.png';
 
-function HomeScreen({navigation}) {
+function HomeScreen({props}) {
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>Home</Text>
-            <Button 
-                color="#002171"
-                title="Go To Menu" 
-                onPress={() => navigation.navigate('Menu')} 
+            <Image 
+                style = {{width: 400, height: 250, marginBottom: 15}}
+                source = {require("./assets/quieroestarsolo.png")}
             />
+            <Text style={styles.text}>Home</Text>
+            
         </View>
     );
 }
